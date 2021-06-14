@@ -4,13 +4,15 @@ app = Flask(__name__)
 # a=False
  
 
-@app.route("/<name>")
-def home(name):
-    return render_template("index.html", content=["tim", "joe", "bill"])
+@app.route("/")
+def home():
+    return render_template("index.html", content="testing")
+
+
 
 
 # @app.route("/<name>")
-# def user(name):
+# def user(nSame):
 #     return f"hello {name}"
 
 # @app.route("/admin/")
@@ -18,4 +20,4 @@ def home(name):
 #     return redirect(url_for("user",name = "Admin"))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
