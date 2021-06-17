@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{%block title %}user{% endblock %}
+{% block content %}
+  {% with messeges = get_flashed_messages()%}
+        {%if messeges %}
+            {% for msg in messeges %}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {%endif%}
+    {%endwith%}
+<p>welcome {{user}}</p>
+
+{% endblock %}
